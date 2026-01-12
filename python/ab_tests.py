@@ -9,11 +9,11 @@ import pandas as pd
 #%%
 df=pd.read_csv('/Users/denistkachenko/Documents/marketing_AB.csv')
 df.head()
-#%%
+
 if "Unnamed: 0" in df.columns:
 
     df = df.drop(["Unnamed: 0"], axis =1)
-#%%
+
 df.rename(columns=lambda x: x.strip().replace(" ", "_"), inplace=True)
 df.head(1)
 #%%
@@ -89,8 +89,4 @@ plt.ylabel('Count', fontsize=13)
 plt.tight_layout()
 plt.show()
 
-#%%
 
-#%%
-
-#%%
